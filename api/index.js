@@ -3,8 +3,8 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const startgg = require('./server_modules/startgg')
-const challonge = require('./server_modules/challonge')
+const startgg = require('../server_modules/startgg')
+const challonge = require('../server_modules/challonge')
 const port = process.env.PORT || 3015
 
 app.use(cors())
@@ -42,6 +42,6 @@ app.post('/obf', async (req, res) => {
   res.json(obf)
 })
 
-app.listen(port, () => {
-  console.log("LISTENING ON PORT:", port)
-})
+app.listen(port, () => {console.log("LISTENING ON PORT:", port)})
+
+module.exports = app
