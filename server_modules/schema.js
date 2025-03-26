@@ -7,20 +7,22 @@ const makeBasicOBF = () => {
       "gameName" : "",
       "ruleset" : "",
       "originURL" : "",
-      "numberEntrants" : 0
+      "numberEntrants" : 0,
+      "tournamentStructure": "",
     },
     "sets" : [],
     "entrants" : []
   }
 }
 
-const makeOBFEvent = (name = "", date = "", game = "", numEntrant = 0, origin = "") => {
+const makeOBFEvent = (name = "", date = "", game = "", numEntrant = 0, origin = "", tournamentStructure) => {
   return {
     name,
     date,
     gameName : game,
     numberEntrants : numEntrant,
-    originURL : origin
+    originURL : origin,
+    tournamentStructure,
   }
 }
 
